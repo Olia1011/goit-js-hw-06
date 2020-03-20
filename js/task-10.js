@@ -8,7 +8,7 @@ users
     return allSkills;
   }, [])
   .reduce((sortedSkills, skill) => {
-    sortedSkills.some(item => skill === item) || sortedSkills.push(skill);
+    sortedSkills.some(el => skill === el) || sortedSkills.push(skill);
     return sortedSkills;
   }, [])
   .sort();
