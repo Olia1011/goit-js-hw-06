@@ -3,9 +3,9 @@ import users from './users.js';
 
 const getSortedUniqueSkills = users =>
 users
-  .reduce((allSkills, user) => {
-    allSkills.push(...user.skills);
-    return allSkills;
+  .reduce((userSkills, user) => {
+    userSkills.push(...user.skills);
+    return userSkills;
   }, [])
   .reduce((sortedSkills, skill) => {
     sortedSkills.some(item => skill === item) || sortedSkills.push(skill);
